@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -25,5 +26,24 @@ public class SumArrayNumbersTests {
     Integer result = SumArrayNumbers.sum(Collections.emptyList());
     assertNotNull(result, "The result cannot be null");
     assertEquals(0, result);
+  }
+
+/**
+* Added tests for challenge
+**/
+  @Test
+  @DisplayName("Tests RedBee challenge")
+  public void testRedBeeChallenge() {
+
+    List<Integer> numbersList = Arrays.asList(1000, 900, 90, 9);
+
+    Integer totalSumOfList = 0; 
+
+    for (int i : numbersList)
+        totalSumOfList += i;
+
+    assertNotNull(totalSumOfList, "The result cannot be null");
+
+    assertEquals(1999, totalSumOfList);
   }
 }
