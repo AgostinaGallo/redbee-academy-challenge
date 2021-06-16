@@ -39,4 +39,20 @@ public class CompareNumbersTests {
     assertNotNull(result, "The result cannot be null");
     assertEquals(2, result);
   }
+
+/**
+* Added tests for challenge
+**/
+  @Test
+  @DisplayName("Tests RedBee challenge")
+  public void testRedBeeChallenge() {
+
+    int expectedInteger = 99;
+
+    Integer maxIntegerResult = Math.max(2, Math.max(expectedInteger, 7));
+
+    assertNotNull(maxIntegerResult, "The result cannot be null");
+
+    assertEquals(expectedInteger, maxIntegerResult);
+  }
 }
