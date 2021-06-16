@@ -27,4 +27,21 @@ public class SumTwoNumbersTests {
     assertNotNull(anotherResult, "The result cannot be null");
     assertEquals(2, anotherResult);
   }
+
+/**
+* Added tests for challenge
+**/
+  @Test
+  @DisplayName("Tests RedBee challenge")
+  public void testRedBeeChallenge() {
+
+    Integer a = 1000;
+    Integer b = 24;
+
+    Integer sumNumbersResult = Integer.sum(a, b);
+  
+    assertNotNull(sumNumbersResult, "The result cannot be null");
+
+    assertEquals(1024, sumNumbersResult);
+  }
 }
